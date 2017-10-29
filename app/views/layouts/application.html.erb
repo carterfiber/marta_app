@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MartaApp</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+  </head>
+
+  <body>
+
+<!-- *********** new navbar **************** -->
+      <nav class="topnav" id="myTopnav">
+        <div class="container-fluid">
+          <ul class="nav navbar-nav">
+            <li class="tour-step tour-step-one"><%= link_to "Marta Mapper", root_path, class: "navbar-brand" %></li>
+           <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+              
+          
+              <li class="dropdown">
+               
+                <ul class="dropdown-menu">
+                  <li></li>
+                </ul>
+              </li>
+              <li></li>
+              
+                <li></li>
+                <li></li>
+            
+              </ul> 
+        </div>
+      </nav>
+<!-- ******** end navbar ********** -->
+<!-- master header -->
+
+
+
+  <div class="container99">
+    <%= yield %>
+  </div>
+    <script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['google_api_key'] %>">
+    </script>
+  </body>
+</html>

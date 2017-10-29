@@ -1,0 +1,53 @@
+<%= form_with(model: location, local: true) do |form| %>
+  <% if location.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(location.errors.count, "error") %> prohibited this location from being saved:</h2>
+
+      <ul>
+      <% location.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+            <div class="form-group">
+              <!-- <label for="name" class="cols-sm-2 control-label">Address or Intersection</label> -->
+              <div class="cols-sm-10">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+                  <%= form.text_field :address, placeholder: "Address or Approx. Location", class: "form-control" %>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <!-- <label for="name" class="cols-sm-2 control-label">City</label> -->
+              <div class="cols-sm-10">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+                  <%= form.text_field :city, placeholder: "City", class: "form-control" %>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              
+              <div class="cols-sm-10">
+                <div class="actions">
+                  
+                  <%= form.submit "Search", class: "btn btn-danger" %>
+                </div>
+              </div>
+            </div>
+
+
+  <div class="field">
+    
+  </div>
+
+  <div class="actions">
+    
+  </div>
+<% end %>
